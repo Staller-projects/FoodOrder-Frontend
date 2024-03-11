@@ -4,17 +4,16 @@ import Button from "../../../components/Button/Index";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ResturentCard from "../../../components/ResturentCard/Index";
-import AxiosRequest from "../../../api/API";
+// import AxiosRequest from "../../../api/API";
 
 const Search = () => {
    
-     AxiosRequest();
+    //  AxiosRequest();
 
     // console.log(AxiosRequest().then());
 
-    return (
-        <div className="w-full">
-            <div className="flex justify-center space-x-2">
+    return ( 
+            <div className="w-full flex justify-center space-x-2">
                 <Button
                     buttonType="PRIMARY"
                     className=" w-fit h-fit py-2 hidden bg-primary-light md:flex sm:block"
@@ -39,8 +38,7 @@ const Search = () => {
                         <ResturentCard />
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> 
     );
 };
 
