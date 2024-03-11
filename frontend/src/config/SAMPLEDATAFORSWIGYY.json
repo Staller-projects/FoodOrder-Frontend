@@ -1,0 +1,262 @@
+{
+    "statusCode": 0,
+    "data": {
+        "query": "bramha",
+        "highlightPreText": "{{",
+        "highlightPostText": "}}",
+        "suggestions": [
+            {
+                "text": "Brahma Veg",
+                "highlightedText": "{{Brahma}} {{Veg}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "orderability": {
+                    "serviceability": true,
+                    "availability": true,
+                    "sla": {
+                        "deliveryTime": 45,
+                        "lastMileDistance": 7.6
+                    }
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "2eae9f3b3240ca7874887ec9bc7bac3d",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":441071,\"primaryRestaurantId\":743515,\"cloudinaryId\":\"2eae9f3b3240ca7874887ec9bc7bac3d\",\"brandId\":441071,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Brahma Veg",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Brahma%20Veg&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A441071%2C%22primaryRestaurantId%22%3A743515%2C%22cloudinaryId%22%3A%222eae9f3b3240ca7874887ec9bc7bac3d%22%2C%22brandId%22%3A441071%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Assal Baramati Wada Pav",
+                "highlightedText": "{{Assal}} {{Baramati}} {{Wada}} {{Pav}}",
+                "type": "DISH",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Dish",
+                "cloudinaryId": "kfzw7ck1rcgpy2kus5qt",
+                "tagToDisplayColor": "#686B78",
+                "metadata": "{\"type\":\"DISH\",\"data\":{\"vegIdentifier\":\"VEG\",\"cloudinaryId\":\"kfzw7ck1rcgpy2kus5qt\"},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Dish\"}",
+                "cta": {
+                    "text": "Assal Baramati Wada Pav",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Assal%20Baramati%20Wada%20Pav&metadata=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22VEG%22%2C%22cloudinaryId%22%3A%22kfzw7ck1rcgpy2kus5qt%22%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Dish",
+                "subCategoryColor": "#686B78"
+            },
+            {
+                "text": "Bramha Juice Bar And Cafe",
+                "highlightedText": "Bramha {{Juice}} {{Bar}} {{And}} {{Cafe}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "3b5ec901bdeb70762f6b6a33cd75d69b",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":401088,\"primaryRestaurantId\":668973,\"cloudinaryId\":\"3b5ec901bdeb70762f6b6a33cd75d69b\",\"brandId\":401088,\"dishFamilyId\":\"846683\",\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Bramha Juice Bar And Cafe",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Bramha%20Juice%20Bar%20And%20Cafe&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A401088%2C%22primaryRestaurantId%22%3A668973%2C%22cloudinaryId%22%3A%223b5ec901bdeb70762f6b6a33cd75d69b%22%2C%22brandId%22%3A401088%2C%22dishFamilyId%22%3A%22846683%22%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Yashri And Bramha Foods",
+                "highlightedText": "{{Yashri}} {{And}} Bramha {{Foods}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "dexmibce3z0hjk9xv7aj",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":373658,\"primaryRestaurantId\":627454,\"cloudinaryId\":\"dexmibce3z0hjk9xv7aj\",\"brandId\":373658,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Yashri And Bramha Foods",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Yashri%20And%20Bramha%20Foods&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A373658%2C%22primaryRestaurantId%22%3A627454%2C%22cloudinaryId%22%3A%22dexmibce3z0hjk9xv7aj%22%2C%22brandId%22%3A373658%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Brahma Garden",
+                "highlightedText": "{{Brahma}} {{Garden}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "uvltlhppkqfium1fpuay",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":49529,\"primaryRestaurantId\":21395,\"cloudinaryId\":\"uvltlhppkqfium1fpuay\",\"brandId\":49529,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Brahma Garden",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Brahma%20Garden&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A49529%2C%22primaryRestaurantId%22%3A21395%2C%22cloudinaryId%22%3A%22uvltlhppkqfium1fpuay%22%2C%22brandId%22%3A49529%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Brahma Vadapav",
+                "highlightedText": "{{Brahma}} {{Vadapav}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "04427723dc326160f766f017adc37a09",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":446943,\"primaryRestaurantId\":756410,\"cloudinaryId\":\"04427723dc326160f766f017adc37a09\",\"brandId\":446943,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Brahma Vadapav",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Brahma%20Vadapav&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A446943%2C%22primaryRestaurantId%22%3A756410%2C%22cloudinaryId%22%3A%2204427723dc326160f766f017adc37a09%22%2C%22brandId%22%3A446943%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Poorna Brahma",
+                "highlightedText": "{{Poorna}} {{Brahma}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "2bd275014179275d14981a289723f4f2",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":390457,\"primaryRestaurantId\":647793,\"cloudinaryId\":\"2bd275014179275d14981a289723f4f2\",\"brandId\":390457,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Poorna Brahma",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Poorna%20Brahma&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A390457%2C%22primaryRestaurantId%22%3A647793%2C%22cloudinaryId%22%3A%222bd275014179275d14981a289723f4f2%22%2C%22brandId%22%3A390457%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Brahma Regency",
+                "highlightedText": "{{Brahma}} {{Regency}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "c43jbv9q19x5sjr67xzs",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":49532,\"primaryRestaurantId\":43797,\"cloudinaryId\":\"c43jbv9q19x5sjr67xzs\",\"brandId\":49532,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Brahma Regency",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Brahma%20Regency&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A49532%2C%22primaryRestaurantId%22%3A43797%2C%22cloudinaryId%22%3A%22c43jbv9q19x5sjr67xzs%22%2C%22brandId%22%3A49532%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Akshar Bhrahma",
+                "highlightedText": "{{Akshar}} {{Bhrahma}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "f1bc9ddf53de574cdc35ab2f717df234",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":467682,\"primaryRestaurantId\":779518,\"cloudinaryId\":\"f1bc9ddf53de574cdc35ab2f717df234\",\"brandId\":467682,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Akshar Bhrahma",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Akshar%20Bhrahma&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A467682%2C%22primaryRestaurantId%22%3A779518%2C%22cloudinaryId%22%3A%22f1bc9ddf53de574cdc35ab2f717df234%22%2C%22brandId%22%3A467682%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            },
+            {
+                "text": "Arambha Hotel",
+                "highlightedText": "{{Arambha}} {{Hotel}}",
+                "type": "RESTAURANT",
+                "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
+                "marketplace": {
+                    "marketplaceId": "SWIGGY",
+                    "businessLineId": "FOOD"
+                },
+                "tagToDisplay": "Restaurant",
+                "tagToDisplayColor": "#686B78",
+                "cloudinaryId": "tppx72kuc4jhkoj7ukxf",
+                "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":267978,\"primaryRestaurantId\":445171,\"cloudinaryId\":\"tppx72kuc4jhkoj7ukxf\",\"brandId\":267978,\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
+                "cta": {
+                    "text": "Arambha Hotel",
+                    "type": "DEEPLINK",
+                    "link": "swiggy://explore?query=Arambha%20Hotel&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A267978%2C%22primaryRestaurantId%22%3A445171%2C%22cloudinaryId%22%3A%22tppx72kuc4jhkoj7ukxf%22%2C%22brandId%22%3A267978%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
+                },
+                "category": "Food",
+                "categoryColor": "#686B78",
+                "subCategory": "Restaurant",
+                "subCategoryColor": "#686B78",
+                "disabled": false
+            }
+        ],
+        "userIntent": "DEFAULT"
+    },
+    "tid": "3d198fe4-4c2d-4223-a85f-357a51e8bf68",
+    "sid": "ckaca2a6-69a4-4623-8b4d-706514dcfb0b",
+    "deviceId": "78492d51-2c12-f9fa-1593-584ffcbde370",
+    "csrfToken": "UFiaiscgdicL-REpUF0n-zqecxDk85YBhh0E_YYw"
+}
