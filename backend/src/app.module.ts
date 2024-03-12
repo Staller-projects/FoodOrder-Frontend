@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AppService } from './app.service'; 
+import { ZmtApisModule } from './zmt-apis/zmt-apis.module';
 
 @Module({
-  imports: [],
+  imports: [ZmtApisModule],
   controllers: [AppController],
   providers: [AppService],
 })
