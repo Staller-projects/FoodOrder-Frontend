@@ -1,11 +1,7 @@
 import React from "react";
-import { Images } from "../../../config/Globals";
-import Search from "./Search";
-import Button from "../../../components/Button/Index";
-import { getLocation } from "../Helper/GetCurrentLocation";
+import SearchContainer from "./SearchContainer";
 
-const HeroSearch = () => { 
-
+const HeroSearch = () => {
     return (
         <div className="w-full space-y-8">
             <h1 className="text-center md:text-5xl sm:text-3xl text-2xl font-bold text-primary">
@@ -19,7 +15,7 @@ const HeroSearch = () => {
             </Button> */}
 
             <div className="">
-                <Search />{" "}
+                <SearchContainer />{" "}
             </div>
 
             {/* <div className=" w-3/6 relative"> 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../../../components/Input/Index";
-import Button from "../../../components/Button/Index";
+import Input from "../../../components/Input/Input";
+import Button from "../../../components/Button/Button";
 import { useForNewUserInput } from "../Hooks/CustomHooks";
 import { FormFields } from "../../../config/Globals";
 import { OnSubmitSignupForm } from "../Helper/HelperFunctions";

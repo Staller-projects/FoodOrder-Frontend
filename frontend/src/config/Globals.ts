@@ -3,15 +3,25 @@
  */
 import SignUpCoverImage from "../assets/images/SignUpCoverImage.png";
 import HomeBackgroundImage from "../assets/images/home_bg.avif";
-import ThumbImage from "../assets/images/thumbImage.avif";
+import ThumbnailImage from "../assets/images/thumbImage.avif";
+import NoImage from "../assets/images/noimageThumbnail.png"
+import ResturentDataLoadingSvg from "../assets/svg/resDataLoading.svg";
+import VegSvg from "../assets/svg/veg.svg";
+import NonVegSvg from "../assets/svg/nonveg.svg";
 
 /**
- * This image object holds the all the images which is being throughout the app.
+ * This image object holds the all the static 
+ * images which is being throughout the app.
  */
 export const Images = {
     SignUpCoverImage: SignUpCoverImage,
     HomeBackgroundImage: HomeBackgroundImage,
-    ThumbImage: ThumbImage,
+    ThumbnailImage: ThumbnailImage,
+    NoImage: NoImage,
+    ResturentDataLoadingSvg: ResturentDataLoadingSvg,
+    VegSvg: VegSvg,
+    NonVegSvg: NonVegSvg,
+
 };
 
 /**

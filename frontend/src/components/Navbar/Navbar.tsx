@@ -1,9 +1,30 @@
 import React, { useEffect, useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { setCartDrawerToggle } from "../../app/Slices/ComponentToggleSlice";
 
 const Index = () => {
-    const NavbarActionData = {};
+    // cart drawer toggle
+    const dispatch = useAppDispatch();
+
+    const cartDisplayState = useAppSelector(
+        (state) => state.ComponentToggleState.data.cartDrawerToggle
+    );
+    const selectedItemsCart = useAppSelector(
+        (state) => state.SelectedItemsCart.data
+    );
+
+    const selector = useAppSelector((state) => state.ResturantData.data);
+
+    const resturantData = selector.data;
+    const tempResturentId = String(
+        resturantData?.pages?.current?.resId
+    ) as String;
+
+    const cartDataLength = selectedItemsCart[`${tempResturentId}`]?.length;
+
+    // const NavbarActionData = {};
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const [navbarBgColor, setNavbarBgColor] = useState(
@@ -35,7 +56,7 @@ const Index = () => {
     return (
         <div>
             <nav
-                className={` ${navbarBgColor} transition-colors duration-200 ease-in flex-no-wrap flex w-full items-center justify-between relative z-10 mb-14 py-2 shadow-dark-mild dark:bg-surface-dark lg:flex-wrap lg:justify-start lg:py-4`}
+                className={` ${navbarBgColor} transition-colors duration-200 ease-in flex-no-wrap flex w-full items-center justify-between relative z-10 py-2 shadow-dark-mild dark:bg-surface-dark lg:flex-wrap lg:justify-start lg:py-4`}
             >
                 <div className="flex w-full flex-wrap items-center justify-between px-3">
                     <button
@@ -55,12 +76,9 @@ const Index = () => {
                         id="navbarSupportedContent12"
                         data-twe-collapse-item
                     >
-                        <a
-                            className="mb-4 me-5 ms-2 mt-3 flex items-center lg:mb-0 lg:mt-0"
-                            href=""
-                        >
+                        <p className="mb-4 me-5 ms-2 mt-3 flex items-center lg:mb-0 lg:mt-0">
                             {/* Logo goes here */}
-                        </a>
+                        </p>
 
                         <ul
                             className="list-style-none me-auto flex flex-col ps-0 lg:flex-row "
@@ -70,61 +88,75 @@ const Index = () => {
                                 className="mb-4 lg:mb-0 lg:pe-2 "
                                 data-twe-nav-item-ref
                             >
-                                <a
+                                <span
                                     className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    href="#"
                                     data-twe-nav-link-ref
                                 >
                                     Link 1
-                                </a>
+                                </span>
                             </li>
 
                             <li
                                 className="mb-4 lg:mb-0 lg:pe-2"
                                 data-twe-nav-item-ref
                             >
-                                <a
+                                <span
                                     className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    href="#"
                                     data-twe-nav-link-ref
                                 >
                                     Link 2
-                                </a>
+                                </span>
                             </li>
 
                             <li
                                 className="mb-4 lg:mb-0 lg:pe-2"
                                 data-twe-nav-item-ref
                             >
-                                <a
+                                <span
                                     className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    href="#"
                                     data-twe-nav-link-ref
                                 >
                                     Link 3
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
 
-                    <div className="relative flex items-center">
-                        <a
-                            className="me-4 text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
-                            href="#"
-                        >
-                            <span className="[&>svg]:w-5">
-                                <ShoppingCartIcon className="text-white " />
-                            </span>
-                        </a>
+                    <div className="flex items-center">
+                        <div className=" me-4 text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80">
+                            <div className="relative">
+                                <span
+                                    className="[&>svg]:w-5 cursor-pointer"
+                                    onClick={() =>
+                                        dispatch(
+                                            setCartDrawerToggle(
+                                                !cartDisplayState
+                                            )
+                                        )
+                                    }
+                                >
+                                    <ShoppingCartIcon
+                                        className={`${
+                                            cartDisplayState
+                                                ? "text-primary"
+                                                : "text-white"
+                                        }`}
+                                    />
+                                </span>
+                                <span className="absolute -top-1 -right-1 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white bg-red-500">
+                                    {cartDataLength ?? 0}
+                                </span>
+                            </div>
+                        </div>
 
                         <div
                             className="relative"
                             data-twe-dropdown-ref
                             data-twe-dropdown-alignment="end"
                         >
-                            <a
+                            {/* notifications Dropdown  */}
+                            <span
                                 className="me-4 flex items-center text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
-                                href="#"
                                 id="dropdownMenuButton1"
                                 role="button"
                                 data-twe-dropdown-toggle-ref
@@ -137,7 +169,7 @@ const Index = () => {
                                 <span className="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white bg-red-500">
                                     1
                                 </span>
-                            </a>
+                            </span>
 
                             <ul
                                 className="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
@@ -145,31 +177,12 @@ const Index = () => {
                                 data-twe-dropdown-menu-ref
                             >
                                 <li>
-                                    <a
+                                    <span
                                         className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
                                         data-twe-dropdown-item-ref
                                     >
                                         Action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
-                                        data-twe-dropdown-item-ref
-                                    >
-                                        Another action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
-                                        data-twe-dropdown-item-ref
-                                    >
-                                        Something else here
-                                    </a>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -179,22 +192,13 @@ const Index = () => {
                             data-twe-dropdown-ref
                             data-twe-dropdown-alignment="end"
                         >
-                            <a
-                                className="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
-                                href="#"
-                                id="dropdownMenuButton2"
-                                role="button"
-                                data-twe-dropdown-toggle-ref
-                                aria-expanded="false"
-                            >
-                                <img
-                                    src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
-                                    className="rounded-full"
-                                    width={25}
-                                    alt=""
-                                    loading="lazy"
-                                />
-                            </a>
+                            <img
+                                src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                                className="rounded-full"
+                                width={25}
+                                alt=""
+                                loading="lazy"
+                            />
 
                             <ul
                                 className="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
@@ -202,31 +206,12 @@ const Index = () => {
                                 data-twe-dropdown-menu-ref
                             >
                                 <li>
-                                    <a
+                                    <span
                                         className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
                                         data-twe-dropdown-item-ref
                                     >
                                         Action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
-                                        data-twe-dropdown-item-ref
-                                    >
-                                        Another action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                                        href="#"
-                                        data-twe-dropdown-item-ref
-                                    >
-                                        Something else here
-                                    </a>
+                                    </span>
                                 </li>
                             </ul>
                         </div>

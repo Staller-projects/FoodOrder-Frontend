@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { InputProps } from "../../types/PropsTypes";
 
-const Index = ({ type, id, className, placeholder, value, onChange }: InputProps) => {
+const Index = ({
+    type,
+    id,
+    className,
+    placeholder,
+    value,
+    onChange,
+}: InputProps) => {
     return (
         <input
             id={id}

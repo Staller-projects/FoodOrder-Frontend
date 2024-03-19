@@ -1,18 +1,27 @@
 import React from "react";
 import "./App.css";
+import AppLayout from "./layout/AppLayout";
 
-import Signup from "./layouts/Signup/Index";
-import Home from "./layouts/Home/Index";
-import Navbar from "../src/components/Navbar/Index";
+import Navbar from "./components/Navbar/Navbar";
+import CheckoutDrawer from "./modules/CheckoutDrawer/CheckoutDrawer";
 
 function App() {
     return (
         <div className="App">
             <div className="App-header">
                 {/* <Signup /> */}
+
                 <Navbar />
-                <div className="">
-                    <Home />
+
+                {/* cart section */}
+                <div className="h-full">
+                    <CheckoutDrawer />
+                </div>
+
+                <div className="space-y-10">
+                    {/* <Home /> */}
+                    {/* <ResturantMenu /> */}
+                    <AppLayout />
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ const initialState: InputFieldsInitialStateType = {
 // reducers for input fileds data manipulation
 export const InputFieldSlice = createSlice({
     name: "InputFleidsData",
-    initialState, 
+    initialState: initialState, 
     reducers: {
         setData: setInputData,
         getData: removeInputData,

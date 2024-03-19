@@ -1,6 +1,6 @@
 import React from "react";
 import SignupForm from "./components/SignupForm";
-import Button from "../../components/Button/Index";
+import Button from "../../components/Button/Button";
 import { Images } from "../../config/Globals";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
