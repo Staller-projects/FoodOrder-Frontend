@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
-import { useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import Header from "./components/Header";
 import CartContent from "./components/CartContent";
+import PlaceOrder from "./components/PlaceOrder";
+import { 
+    setPlaceOrderView,
+} from "../../app/Slices/ComponentToggleSlice";
 
 const CheckoutDrawer = () => {
     const [cartAmountSum, setCartAmountSum] = useState(0);
 
-    const cartDisplayState = useAppSelector(
-        (state) => state.ComponentToggleState.data.cartDrawerToggle
-    );
+    const selector = useAppSelector((state) => state.ComponentToggleState.data);
     const cartItemsObject: any = useAppSelector(
         (state) => state.SelectedItemsCart.data
     );
+    const resturantSelector = useAppSelector((state) => state.ResturantData);
+    const resturantData: any = resturantSelector.data.data;
+    const resturandId = String(resturantData?.pages?.current?.resId) as string;
+    const dispatch = useAppDispatch();
+    const cartDataLength = cartItemsObject[`${resturandId}`]?.length;
 
     // calculating the sum of amount of items inside cart
     useEffect(() => {
         calculateCartAmountSum();
+        // cartDataLength < 1 &&
+        //     dispatch(setCartDrawerToggle(!selector.cartDrawerToggle));
         // eslint-disable-next-line
     }, [cartItemsObject]);
 
@@ -25,36 +34,42 @@ const CheckoutDrawer = () => {
 
         // eslint-disable-next-line
         Object.entries(cartItemsObject).map(([key, value]) => {
-            tempCartAmountSum +=
-                Array.isArray(value) &&
-                value.reduce((total, currentItem) => {
-                    return (
-                        total +
-                        currentItem.item.display_price * currentItem.itemCount
-                    );
-                }, 0);
+            Number(key) === Number(resturandId) &&
+                (tempCartAmountSum +=
+                    Array.isArray(value) &&
+                    value.reduce((total, currentItem) => {
+                        return (
+                            total +
+                            currentItem.item.display_price *
+                                currentItem.itemCount
+                        );
+                    }, 0));
+            setCartAmountSum(tempCartAmountSum);
         });
-
-        setCartAmountSum(tempCartAmountSum);
     };
 
     return (
         <div className="relative drawer  ">
             <div
                 className={`fixed  drop-shadow-2xl top-0 -bottom-10  right-0 z-50 ${
-                    cartDisplayState && "w-[25%]"
+                    selector.cartDrawerToggle && "w-[25%]"
                 } h-screen transition-transform `}
             >
-                {cartDisplayState && (
+                {selector.cartDrawerToggle && (
                     <div className="border-[1px]  h-full px-5 bg-white !z-50 border-gray-400/40">
                         <div className="">
                             {/* Header goes here */}
                             <Header />
                         </div>
 
-                        {/* Cart Content */}
+                        {/* drawer Content */}
                         <div className="h-full py-5 overflow-y-auto pb-32">
-                            <CartContent />
+                            {/* In CartContnet itels will be list and in placeOrder view payment is done */}
+                            {selector.placeOrderView ? (
+                                <PlaceOrder />
+                            ) : (
+                                <CartContent />
+                            )}
                         </div>
 
                         {/* Checkout button */}
@@ -64,12 +79,35 @@ const CheckoutDrawer = () => {
                                     Total Amount :{" "}
                                 </span>
                                 <span className="text-sm font-bold text-green-600">
-                                    &#8377; {cartAmountSum}
+                                    &#8377;{" "}
+                                    {cartDataLength > 0 && cartAmountSum}
                                 </span>
                             </div>
-                            <Button buttonType="OUTLINE">
-                                Proceed to Checkout
-                            </Button>
+
+                            {selector.placeOrderView ? (
+                                <Button
+                                    buttonType="PRIMARY"
+                                    onClick={() =>
+                                        console.log("making payment...")
+                                    }
+                                >
+                                    Make Payment of &#8377;{" "}
+                                    {cartDataLength > 0 && cartAmountSum}
+                                </Button>
+                            ) : (
+                                <Button
+                                    buttonType="OUTLINE"
+                                    onClick={() =>
+                                        dispatch(
+                                            setPlaceOrderView(
+                                                !selector.placeOrderView
+                                            )
+                                        )
+                                    }
+                                >
+                                    Proceed to Checkout
+                                </Button>
+                            )}
                         </div>
                     </div>
                 )}

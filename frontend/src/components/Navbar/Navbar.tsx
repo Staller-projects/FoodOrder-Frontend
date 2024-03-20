@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setCartDrawerToggle } from "../../app/Slices/ComponentToggleSlice";
+import { Images } from "../../config/Globals";
+// import Search from "../../modules/Home/Components/SearchContainer";
 
 const Index = () => {
     // cart drawer toggle
@@ -47,18 +49,18 @@ const Index = () => {
     useEffect(() => {
         // Set navbar background color based on scroll position
         if (scrollPosition > 100) {
-            setNavbarBgColor("bg-gray-500/70");
+            setNavbarBgColor("bg-gray-500/30");
         } else {
-            setNavbarBgColor("backdrop-blur-lg  bg-gray-500/70");
+            setNavbarBgColor("backdrop-blur-lg  bg-gray-500/30");
         }
     }, [scrollPosition]);
 
     return (
         <div>
             <nav
-                className={` ${navbarBgColor} transition-colors duration-200 ease-in flex-no-wrap flex w-full items-center justify-between relative z-10 py-2 shadow-dark-mild dark:bg-surface-dark lg:flex-wrap lg:justify-start lg:py-4`}
+                className={` ${navbarBgColor} transition-colors duration-200 ease-in flex-no-wrap py-2 flex w-full items-center justify-between relative z-10  shadow-dark-mild dark:bg-surface-dark lg:flex-wrap lg:justify-start lg:py-2`}
             >
-                <div className="flex w-full flex-wrap items-center justify-between px-3">
+                <div className="flex w-full flex-wrap items-center justify-around px-3">
                     <button
                         className="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
                         type="button"
@@ -76,51 +78,16 @@ const Index = () => {
                         id="navbarSupportedContent12"
                         data-twe-collapse-item
                     >
-                        <p className="mb-4 me-5 ms-2 mt-3 flex items-center lg:mb-0 lg:mt-0">
-                            {/* Logo goes here */}
-                        </p>
-
-                        <ul
-                            className="list-style-none me-auto flex flex-col ps-0 lg:flex-row "
-                            data-twe-navbar-nav-ref
-                        >
-                            <li
-                                className="mb-4 lg:mb-0 lg:pe-2 "
-                                data-twe-nav-item-ref
-                            >
-                                <span
-                                    className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    data-twe-nav-link-ref
-                                >
-                                    Link 1
-                                </span>
-                            </li>
-
-                            <li
-                                className="mb-4 lg:mb-0 lg:pe-2"
-                                data-twe-nav-item-ref
-                            >
-                                <span
-                                    className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    data-twe-nav-link-ref
-                                >
-                                    Link 2
-                                </span>
-                            </li>
-
-                            <li
-                                className="mb-4 lg:mb-0 lg:pe-2"
-                                data-twe-nav-item-ref
-                            >
-                                <span
-                                    className="text-white font-bold transition duration-200 hover:ease-in-out motion-reduce:transition-none lg:px-2"
-                                    data-twe-nav-link-ref
-                                >
-                                    Link 3
-                                </span>
-                            </li>
-                        </ul>
+                        <img
+                            src={Images.AppLogo}
+                            width={40}
+                            alt=""
+                            className=" mx-5 flex items-center lg:mb-0 lg:mt-0"
+                        ></img>
                     </div>
+
+                    {/* Search component */}
+                    <div className="">{/* <Search /> */}</div>
 
                     <div className="flex items-center">
                         <div className=" me-4 text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80">
@@ -128,6 +95,7 @@ const Index = () => {
                                 <span
                                     className="[&>svg]:w-5 cursor-pointer"
                                     onClick={() =>
+                                        cartDataLength > 0 &&
                                         dispatch(
                                             setCartDrawerToggle(
                                                 !cartDisplayState
@@ -139,7 +107,7 @@ const Index = () => {
                                         className={`${
                                             cartDisplayState
                                                 ? "text-primary"
-                                                : "text-white"
+                                                : "text-gray-700"
                                         }`}
                                     />
                                 </span>
@@ -163,12 +131,12 @@ const Index = () => {
                                 aria-expanded="false"
                             >
                                 <span className="[&>svg]:w-5">
-                                    <NotificationsIcon className="text-white " />
+                                    {/* <NotificationsIcon className="text-white " /> */}
                                 </span>
 
-                                <span className="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white bg-red-500">
+                                {/* <span className="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white bg-red-500">
                                     1
-                                </span>
+                                </span> */}
                             </span>
 
                             <ul

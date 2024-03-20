@@ -142,13 +142,9 @@ const FoodItemCard = ({
 
                 {dataThroughComponent === "menu" && (
                     <div className=" flex items-center">
-                        <p className="bg-blue-100 text-blue-800 text-xs font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                        {/* <p className="bg-blue-100 text-blue-800 text-xs font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">
                             {singleFoodItemFromProps?.order}
-                        </p>
-                        <p className="ms-2 text-sm font-semibold text-black">
-                            Votes
-                        </p>
-                        <span className="w-1  h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
+                        </p> */}
                         <p className="text-sm text-nowrap font-medium text-gray-400">
                             {singleFoodItemFromProps?.order} votes
                         </p>

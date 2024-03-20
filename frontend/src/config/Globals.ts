@@ -4,13 +4,14 @@
 import SignUpCoverImage from "../assets/images/SignUpCoverImage.png";
 import HomeBackgroundImage from "../assets/images/home_bg.avif";
 import ThumbnailImage from "../assets/images/thumbImage.avif";
-import NoImage from "../assets/images/noimageThumbnail.png"
+import NoImage from "../assets/images/noimageThumbnail.png";
+import AppLogo from "../assets/images/appLogo.png";
 import ResturentDataLoadingSvg from "../assets/svg/resDataLoading.svg";
 import VegSvg from "../assets/svg/veg.svg";
 import NonVegSvg from "../assets/svg/nonveg.svg";
 
 /**
- * This image object holds the all the static 
+ * This image object holds the all the static
  * images which is being throughout the app.
  */
 export const Images = {
@@ -18,10 +19,10 @@ export const Images = {
     HomeBackgroundImage: HomeBackgroundImage,
     ThumbnailImage: ThumbnailImage,
     NoImage: NoImage,
+    AppLogo: AppLogo,
     ResturentDataLoadingSvg: ResturentDataLoadingSvg,
     VegSvg: VegSvg,
     NonVegSvg: NonVegSvg,
-
 };
 
 /**
@@ -39,5 +40,3 @@ export enum FormFields {
     email = "email",
     password = "password",
 }
-
- 

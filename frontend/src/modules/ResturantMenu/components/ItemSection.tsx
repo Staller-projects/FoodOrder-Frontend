@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import { Category } from "../../../types/ResturentMenu";
-import FoodItemCard from "./FoodItemCard";
-import { motion } from "framer-motion";
+import FoodItemCard from "./FoodItemCard"; 
 
 interface ItemSectionProps {
     children?: ReactNode;
@@ -11,26 +10,23 @@ interface ItemSectionProps {
 
 const ItemSection = ({ children, className, category }: ItemSectionProps) => {
     return (
-        <motion.div className="min-w-full">
-            {/* section */}
-            <div className=" rounded-lg">
-                <h1 className="text-lg py-2 px-5 font-bold text-gray-500">
-                    {category?.category?.name}
-                </h1>
+        <div className=" ">
+            <h1 className="text-lg py-2 px-5 font-bold text-gray-500">
+                {category?.category?.name}
+            </h1>
 
-                {/* Item cards */}
-                <div className="flex justify-start flex-wrap gap-5 p-5">
-                    {/* Perticular item cards loop*/}
-                    {category?.category?.items?.map((item, index) => (
-                        <FoodItemCard
-                            key={index}
-                            dataThroughComponent={"menu"}
-                            singleFoodItemFromProps={item.item}
-                        />
-                    ))}
-                </div>
+            {/* Item cards */}
+            <div className=" overflow-y-auto  flex justify-start flex-wrap gap-5 p-5">
+                {/* Perticular item cards loop*/}
+                {category?.category?.items?.map((item, index) => (
+                    <FoodItemCard
+                        key={index}
+                        dataThroughComponent={"menu"}
+                        singleFoodItemFromProps={item.item}
+                    />
+                ))}
             </div>
-        </motion.div>
+        </div>
     );
 };
 

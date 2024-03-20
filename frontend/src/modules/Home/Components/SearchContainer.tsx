@@ -4,7 +4,7 @@ import Button from "../../../components/Button/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SearchResultCard from "./SearchResultCard";
-import { getSearchSuggestionsApi } from "../../../api/GetRequests"; 
+import { getSearchSuggestionsApi } from "../../../api/GetRequests";
 import type SearchSuggestions from "../../../types/SearchSuggestions";
 import { useDebounce } from "../hooks";
 
@@ -18,8 +18,12 @@ const Search = () => {
     const [searchSuggestions, setSearchSuggestions] = useState([]);
 
     useEffect(() => {
-        debounceSearchQuery ? getSearchSuggestions(debounceSearchQuery) : setSearchSuggestions([]); // if the search input is not empty, null, undedfinedo rnull then only the api is called.
+        debounceSearchQuery
+            ? getSearchSuggestions(debounceSearchQuery)
+            : setSearchSuggestions([]); // if the search input is not empty, null, undedfinedo rnull then only the api is called.
     }, [debounceSearchQuery]);
+
+    console.log(searchSuggestions);
 
     const getSearchSuggestions = async (debounceSearchQuery: string) => {
         try {
@@ -47,7 +51,7 @@ const Search = () => {
                 <div className="relative">
                     <Input
                         type="text"
-                        className="py-1.5 ps-10"
+                        className="py-1.5 ps-10 bg-"
                         placeholder="Search Resturents, Dishes, etc."
                         onChange={(userInput) => setSearchQuery(userInput)}
                     />
@@ -56,7 +60,7 @@ const Search = () => {
                 </div>
 
                 {/* Search Result container */}
-                <div className="my-1 md:max-h-[450px] sm:max-h-[450px] overflow-y-auto shadow-2xl space-y-2 shadow-primary-light/30 border-[0.2px] border-gray-300 bg-transparent backdrop-blur-lg rounded-lg">
+                <div className="my-1 md:max-h-[450px] sm:max-h-[450px] overflow-y-auto shadow-2xl space-y-2 drop-shadow-2xl  bg- backdrop-blur-lg rounded-lg">
                     {/* Loop the search result into cards */}
                     {searchSuggestions?.map(
                         (
