@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b676a54b-ed8d-4f70-8da2-299b3905d4ee/deploy-status?branch=main)](https://app.netlify.com/sites/zoma2/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2044fcc-7fb7-472a-8d22-efa79daf4ea3/deploy-status?branch=main)](https://app.netlify.com/sites/zoma2/deploys)
 
 # Getting Started with Create React App  
 
