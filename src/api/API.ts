@@ -14,7 +14,7 @@ const URL = {
 };
 
 const ERROR = {
-    NETWORK_ERROR: "Internet Not connected or DNS not found",   
+    NETWORK_ERROR: "Internet Not connected or DNS not found",
 };
 
 const AxiosRequest = async ({
@@ -33,7 +33,7 @@ const AxiosRequest = async ({
 
         // console.log(response);
 
-        if (response.data.code == "ENOTFOUND") {
+        if (response.data.code === "ENOTFOUND") {
             throw new Error(ERROR.NETWORK_ERROR);
         } else {
             return response.data;
