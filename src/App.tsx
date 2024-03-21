@@ -16,10 +16,9 @@ function App() {
                 {/* cart section */}
                 <div className="h-full">
                     <CheckoutDrawer />
-                    
                 </div>
 
-                <div className="space-y-10">
+                <div className="space-y-10 h-full">
                     {/* <Home /> */}
                     {/* <ResturantMenu /> */}
                     <AppLayout />

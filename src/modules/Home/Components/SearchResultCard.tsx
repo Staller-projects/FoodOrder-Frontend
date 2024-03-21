@@ -87,7 +87,7 @@ const Index = ({ resturentObject }: ResturentCardProps) => {
                         </h4>
                         <div className="flex flex-wrap w-full space-x-3">
                             {/* Dining rating section */}
-                            <div className="text-white text-xs text-nowrap space-x-2">
+                            <div className="text-white  text-xs text-nowrap space-x-2">
                                 <span
                                     className={`${getRatingBadgeColor(
                                         res?.diningRating

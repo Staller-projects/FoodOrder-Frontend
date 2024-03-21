@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface ComponentToggleTypes {
     cartDrawerToggle: boolean;
     placeOrderView: boolean;
+    menuCategorySidebar: boolean;
 }
 
 interface InitialState {
@@ -13,6 +14,7 @@ const initialStateOfCompToggle: InitialState = {
     data: {
         cartDrawerToggle: false,
         placeOrderView: false,
+        menuCategorySidebar: true,
     },
 };
 
@@ -26,9 +28,12 @@ const ComponentToggleSlice = createSlice({
         setPlaceOrderView: (state, action) => {
             state.data.placeOrderView = action.payload;
         },
+        menuCategorySidebar: (state, action) => {
+            state.data.menuCategorySidebar = action.payload;
+        },
     },
 });
 
-export const { setCartDrawerToggle, setPlaceOrderView } =
+export const { setCartDrawerToggle, setPlaceOrderView, menuCategorySidebar } =
     ComponentToggleSlice.actions;
 export default ComponentToggleSlice.reducer;

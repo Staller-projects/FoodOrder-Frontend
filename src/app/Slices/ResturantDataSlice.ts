@@ -39,7 +39,6 @@ export const ResturantDataSlice = createSlice({
             state.data.data = action.payload;
         });
         builder.addCase(fetchResturentData.rejected, (state, action) => {
-            // state.error = action.payload
             console.log("error in reducer line 31: ", action.payload);
         });
     },

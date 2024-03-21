@@ -49,9 +49,9 @@ const Index = () => {
     useEffect(() => {
         // Set navbar background color based on scroll position
         if (scrollPosition > 100) {
-            setNavbarBgColor("bg-gray-500/30");
+            setNavbarBgColor("bg-primary/50");
         } else {
-            setNavbarBgColor("backdrop-blur-lg  bg-gray-500/30");
+            setNavbarBgColor("backdrop-blur-lg  bg-primary/50");
         }
     }, [scrollPosition]);
 

@@ -44,7 +44,7 @@ const MenuListSidebar = () => {
      * I want the dropdown in which which the title of the dropdown will be the category
      */
     return (
-        <div className="py-2 mx-auto flex  w-10/12 max-h-[50%]">
+        <div className=" mx-auto  max-h-[50%]">
             {selector.isLoading ? (
                 <div className="flex justify-center align-middle w-full h-40 ">
                     <img
@@ -52,8 +52,8 @@ const MenuListSidebar = () => {
                         alt="Resturant loading svg"
                     />
                 </div>
-            ) : ( 
-                    <MenuCardsIterator resturantMenus={resturantMenus} /> 
+            ) : (
+                <MenuCardsIterator resturantMenus={resturantMenus} />
             )}
         </div>
     );

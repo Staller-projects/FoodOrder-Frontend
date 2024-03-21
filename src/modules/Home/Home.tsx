@@ -3,9 +3,13 @@ import HeroContainer from "./Components/HeroContainer";
 
 const Index = () => {
     return (
-        <div className="my-10">
+        <div className="space-y-12">
             {/* Hero search box  */}
-            <HeroContainer />
+
+            <div className=""></div>
+            <div className="">
+                <HeroContainer />
+            </div>
 
             {/* <ScrapingComponent /> */}
         </div>

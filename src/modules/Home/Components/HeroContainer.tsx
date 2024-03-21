@@ -3,9 +3,10 @@ import SearchContainer from "./SearchContainer";
 
 const HeroSearch = () => {
     return (
-        <div className="w-full space-y-8">
-            <h1 className="text-center md:text-5xl sm:text-3xl text-2xl font-bold text-primary">
-                Find best resturents <br /> near by
+        <div className="w-full flex flex-col justify-center space-y-16">
+            <h1 className="text-center md:text-5xl sm:text-3xl text-2xl font-bold ">
+                Search best <span className="text-primary">restaurant</span>{" "}
+                <br /> near by
             </h1>
 
             {/* search box */}
@@ -15,30 +16,8 @@ const HeroSearch = () => {
             </Button> */}
 
             <div className="">
-                <SearchContainer />{" "}
+                <SearchContainer />
             </div>
-
-            {/* <div className=" w-3/6 relative"> 
-                <Input
-                    type="text"
-                    className="py-2 ps-10"
-                    placeholder="Search Resturents, Dishes, etc."
-                />
- 
-                <SearchIcon className="absolute top-2 left-2 text-primary" />
- 
-                <div className="bg-gray-300">
-                    <div className="searchCard ">
-                        <div className="">
-                            <img
-                                src={Images.ThumbImage}
-                                className="rounded-lg"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
 };

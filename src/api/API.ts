@@ -7,23 +7,27 @@ interface AxiosRequestTypes {
     headers?: {};
 }
 
+const PROD_ENV: boolean = true; 
+
+// const BACKEND_URL = 'ec2-3-110-172-185.ap-south-1.compute.amazonaws.com'
+const BACKEND_URL = '3.108.235.218'
+
 const URL = {
-    protocol: "http",
-    domain: "localhost",
-    port: "4000",
+    protocol: !PROD_ENV ? "https" : "http",
+    domain: PROD_ENV ? BACKEND_URL : "localhost",
+    port: PROD_ENV ? '' : "4000",
 };
 
 const ERROR = {
     NETWORK_ERROR: "Internet Not connected or DNS not found",
 };
-
+ 
 const AxiosRequest = async ({
     method,
     url,
-}: AxiosRequestTypes): Promise<Object> => {
-    const custUrl = url;
-    const baseUrl = `${URL.protocol}://${URL.domain}:${URL.port}/${custUrl}`;
-    console.log(baseUrl);
+}: AxiosRequestTypes): Promise<Object> => { 
+    const baseUrl = `${URL.protocol}://${URL.domain}:${URL.port}/${url}`;
+    // console.log(baseUrl);
 
     try {
         const response = await axios({
